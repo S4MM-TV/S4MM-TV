@@ -1,1 +1,1017 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
 
+     <link rel="stylesheet" href="https://d50c5e3b-c5e0-4242-9b50-a42bfba8130b-00-2fnuk8nrxnizu.sisko.replit.dev/FMmyanmar/style.css">
+
+        <script src="https://d50c5e3b-c5e0-4242-9b50-a42bfba8130b-00-2fnuk8nrxnizu.sisko.replit.dev/FMmyanmar/script.js"></script>         
+
+</head>
+  <body>
+    <header>
+     <p>S4MM FM Radio </p>
+      <input type="button" value ="Stop" id="Btn">
+      <img src="https://bgsbarnala.com/images/5e0ea029945d6.gif " id="loader">
+
+    </header>
+
+
+
+
+    <ul id="myUL">
+       <li> <p id="wa"> FM စဖွင့်ချိန် ခဏစောင့်ပေးပါ
+</p> </li> 
+
+      <li class="fresh">
+        <a>
+          သစ္စာပါရမီ FM
+
+          <img src="https://i.imgur.com/0P5Kf0N.png" id="FreshLogo">
+        </a></li>
+
+    <li class="city">
+      <a>
+     DHAMMA FM
+          <img src=https://i.imgur.com/DpYmCWa.jpg" id="FreshLogo">
+      </a></li>
+
+       <li class="LagosTalk"><a>
+       Mandalay FM
+     <img src="https://i.imgur.com/69O8cjK.png" id="LagosTalksLogo">
+      </a></li>
+
+     <li class="max">
+       <a>City FM
+      <img src="https://i.imgur.com/RLm6vWT.png" id="MaxLogo">
+       </a></li>
+
+    <li class="classic"><a>
+      CHERRY FM
+         <img src="https://i.imgur.com/it0BaH5.png" id="ClassicLogo">
+      </a></li>
+
+
+     <li class="jatto"><a>
+       AYEYARWADY FM
+      <img src="https://i.imgur.com/DzATrm9.png" id="JattoLogo"> 
+       </a></li>
+    <li class="grace"><a>
+       FRIENDS FM
+       <img src="https://i.imgur.com/vsKAOOv.png"  id="FadLogo">
+      </a></li>
+     <li class="thirty2"><a>
+        ARKAR MYINT MO FM
+    <img src="https://i.imgur.com/vsKAOOv.png" id="Logo32">
+       </a></li>
+    <li class="Lagos"><a>
+      ARAKAN FM
+       <img src="https://i.imgur.com/OyVmcWq.jpg" id="NigInfoLogo">
+      </a></li>
+
+       <li class="smash"><a>
+        SHWEHINTHAR FM
+      <img src="https://i.imgur.com/zN5pwgL.jpg" id="SmashLogo">
+      </a></li>
+
+       <li class="dream"><a>
+        NEVERMIRE FM
+      <img src="https://i.imgur.com/MS25syd.jpg" id="DreamLogo">
+      </a></li>
+
+          <li class="crest"><a>
+          MINGALARPAR FM
+      <img src="https://i.imgur.com/PxoUwx1.jpg" id="CrestLogo">
+      </a></li>
+
+         <li class="root"><a>
+          Epoch 153 FM
+      <img src="https://i.imgur.com/lCLNgWC.jpg" id="RootLogo">
+      </a></li>
+
+
+          <li class="freshLagos"><a>
+           Bagan FM, 
+      <img src="https://i.imgur.com/PQQdsDY.png"  id="FreshLagos">
+      </a></li>
+
+
+
+
+         <li class="arewa"><a>
+      Myanmar International Radio
+     <img src="https://i.imgur.com/H56AwTm.png" id="ArewaLogo">
+      </a></li>
+
+       <li class="Guarantee"><a>
+        Radio Voice of Burma
+     <img src="https://i.imgur.com/w7RKYsC.png" id="GuaranteeLogo">
+      </a></li>
+
+       <li class="Liberty"><a>
+        Star FM
+     <img src="https://i.imgur.com/JiXkujf.png " id="LibertyLogo">
+      </a></li> 
+
+    </ul>
+
+    <p id="CountDown"></p>
+
+
+
+    <div class="footer">
+      <p id="notice"> </p>
+    </div>
+  </body>
+   <script>
+
+
+
+
+
+  //***********************Fresh FM, Ibadan**************************   
+  var FreshBtn    = document.querySelector(".fresh");
+  var FreshURL = new Audio("https://edge.mixlr.com/channel/nmtev");
+  var Notice =  document.querySelector("#notice");
+  var LoadingIcon = document.querySelector("#loader");
+  var StopBtn     = document.querySelector("#Btn");
+
+
+
+
+  function ProgressBar()
+    {
+     // LoadingIcon.style.display = "block";
+    const timeH = document.querySelector('#CountDown');
+    let timeSecond = 5;
+    timeH.innerHTML = timeSecond ;
+
+    const CountDown = setInterval(()=>{
+      timeSecond--;
+      timeH.innerHTML = timeSecond ;
+        //LoadingIcon.style.display = "block";
+      if(timeSecond <=0 || timeSecond < 1)
+      {
+        clearInterval(CountDown);
+        LoadingIcon.style.display = "none"; 
+      }
+    }, 1000)
+  }
+
+  function FreshPlay(){
+    if(FreshURL.duration > 0)
+      {
+        FreshURL.load();
+        FreshURL.play()
+        Notice.innerHTML ="You're listening to သစ္စာပါရမီ FM "
+
+      }
+    else{
+        Notice.innerHTML ="Station is currently off line "
+    }
+
+  }
+
+  FreshBtn.onclick=()=>{
+
+    if(navigator.onLine)
+      {
+        LoadingIcon.style.display = "block";
+        FreshPlay();
+         ProgressBar();
+      }
+      else{
+        Notice.innerHTML ="Please check your internet ";
+    }
+    CityURL.pause();
+    MaxURL.pause();
+    ClassicURL.pause();
+    JordanURL.pause();
+    FaadURL.pause();
+    Thirty2URL.pause();
+    NigeriaInfoURL.pause();
+    EagleURL.pause();
+    DreamURL.pause();
+    CrestURL.pause();
+   RootURL.pause();
+   FreshLagURL.pause();
+   LagoTalkURL.pause();
+    ArewaURL.pause();
+    GuaranteeURL.pause();
+   LibertyURL.pause();
+  }
+
+  //******************************* CITY FM **************************
+  var CityBtn    = document.querySelector(".city");
+  var CityURL = new Audio("https://stream-151.zeno.fm/v3awsfmhnchvv?zs=lwfwL0nbRaWSb2aJrBTDXg&aw_0_req_lsid=75f4898c82699cd1d3ad9b1733fe3b25&acu-uid=795281783502&an-uid=3532454489215125157&mm-uid=e8536437-7c6c-4c00-b1b9-ed2b7c87ccdf&dot-uid=0947240207763cef861a3cad&amb-uid=8771913727772736811&dbm-uid=CAESEFL2NO5uGDQh22jXjduHbv8&cto-uid=e3ba352b-7da6-4fda-bc62-53fa8a05eb0d-649de58d-5553&bsw-uid=daa8c31a-5535-4302-802c-016be705f17c&dyn-uid=45241777188514497&ttd-uid=7a480f5d-aecd-4b4f-a9fc-a529f6bce5cf&triton-uid=cookie%3A22d14922-b460-4f67-9890-3a6aaa26d0c3&adt-uid=cuid_90be48c0-1a66-11ee-9246-125335d52042");
+
+
+
+  function CityPlay(){
+    if(CityURL.duration > 0)
+      {
+        CityURL.load();
+        CityURL.play()
+        Notice.innerHTML ="You're listening to DHAMMA FM "
+
+      }
+    else{
+        Notice.innerHTML ="Station is currently off line "
+    }
+
+  }
+
+  CityBtn.onclick=()=>{
+
+    if(navigator.onLine)
+      {
+        LoadingIcon.style.display = "block";
+        CityPlay();
+        ProgressBar();
+      }
+      else{
+        Notice.innerHTML ="Please check your internet ";
+    }
+    FreshURL.pause();
+    MaxURL.pause();
+    ClassicURL.pause();
+     JordanURL.pause();
+    FaadURL.pause();
+    Thirty2URL.pause();
+    NigeriaInfoURL.pause();
+    EagleURL.pause();
+    DreamURL.pause();
+    CrestURL.pause();
+   RootURL.pause();
+    FreshLagURL.pause();
+    LagoTalkURL.pause();
+    ArewaURL.pause();
+     GuaranteeURL.pause();
+   LibertyURL.pause();
+  }
+
+
+      //****************** Lagos Talks *******************
+
+  var  LagoTalkBtn = document.querySelector(".LagosTalk");
+  var  LagoTalkURL = new Audio("https://ppradio.b-cdn.net/LiveApp/streams/59wTNqWxslvQ1684134930608.m3u8");
+
+  function LagosTalkPlay(){
+    if( LagoTalkURL.duration > 0)
+      {
+         LagoTalkURL.load();
+         LagoTalkURL.play()
+        Notice.innerHTML ="You're listening to Mandalay FM "
+
+      }
+    else{
+        Notice.innerHTML ="Station is currently off line "
+    }
+
+  }
+
+  LagoTalkBtn.onclick=()=>{
+
+    if(navigator.onLine)
+      {
+        LoadingIcon.style.display = "block";
+        LagosTalkPlay();
+        ProgressBar();
+      }
+      else{
+        Notice.innerHTML ="Please check your internet ";
+    }
+    CityURL.pause();
+    FreshURL.pause();
+    MaxURL.pause();
+    ClassicURL.pause();
+    JordanURL.pause();
+    FaadURL.pause();
+    Thirty2URL.pause();
+    NigeriaInfoURL.pause();
+    EagleURL.pause();
+    DreamURL.pause();
+    CrestURL.pause();
+    RootURL.pause();
+    FreshLagURL.pause();
+    ArewaURL.pause();
+    GuaranteeURL.pause();
+    LibertyURL.pause();
+
+  }
+
+
+
+
+
+  //******************************* MAX FM ***************************
+  var MaxBtn    = document.querySelector(".max");
+  var MaxURL = new Audio("https://stream-151.zeno.fm/rq4ux25pyeruv?zs=kPi0JxFkTlay1aP8IOUi8Q&aw_0_req_lsid=75f4898c82699cd1d3ad9b1733fe3b25&acu-uid=795281783502&an-uid=3532454489215125157&mm-uid=e8536437-7c6c-4c00-b1b9-ed2b7c87ccdf&dot-uid=0947240207763cef861a3cad&amb-uid=8771913727772736811&cto-uid=e3ba352b-7da6-4fda-bc62-53fa8a05eb0d-649de58d-5553&bsw-uid=daa8c31a-5535-4302-802c-016be705f17c&dyn-uid=45241777188514497&ttd-uid=7a480f5d-aecd-4b4f-a9fc-a529f6bce5cf&triton-uid=cookie%3A22d14922-b460-4f67-9890-3a6aaa26d0c3&adt-uid=cuid_90be48c0-1a66-11ee-9246-125335d52042");
+
+  function MaxPlay(){
+    if(MaxURL.duration > 0)
+      {
+        MaxURL.load();
+        MaxURL.play()
+        Notice.innerHTML ="You're listening to City FM"
+
+      }
+    else{
+        Notice.innerHTML ="Station is currently off line "
+      alert("ooo");
+    }
+
+  }
+
+  MaxBtn.onclick=()=>{
+
+    if(navigator.onLine)
+      {
+        LoadingIcon.style.display = "block";
+        MaxPlay();
+        ProgressBar();
+      }
+      else{
+        Notice.innerHTML ="Please check your internet ";
+    }
+    CityURL.pause();
+    FreshURL.pause();
+    ClassicURL.pause()
+    JordanURL.pause();
+    FaadURL.pause();
+    Thirty2URL.pause();
+    NigeriaInfoURL.pause();
+    EagleURL.pause();
+    DreamURL.pause();
+    CrestURL.pause();
+    RootURL.pause();
+    FreshLagURL.pause();
+    LagoTalkURL.pause();
+   ArewaURL.pause();
+    GuaranteeURL.pause();
+    LibertyURL.pause();
+  }
+  //******************************* Classic FM ***********************
+
+  var  ClassicBtn    = document.querySelector(".classic");
+  var  ClassicURL = new Audio("https://cherry.akiyaresearch.com:444/stream/89/;?type=http&nocache=8");
+
+  function  ClassicPlay(){
+    if(ClassicURL.duration > 0)
+      {
+        ClassicURL.load();
+        ClassicURL.play()
+        Notice.innerHTML ="You're listening to CHERRY FM"
+
+      }
+    else{
+        Notice.innerHTML ="Station is currently off line "
+    }
+
+  }
+
+  ClassicBtn.onclick=()=>{
+
+    if(navigator.onLine)
+      {
+        LoadingIcon.style.display = "block";
+        ClassicPlay();
+        ProgressBar();
+      }
+      else{
+        Notice.innerHTML ="Please check your internet ";
+    }
+    CityURL.pause();
+    FreshURL.pause();
+    MaxURL.pause();
+    JordanURL.pause();
+    FaadURL.pause();
+    Thirty2URL.pause();
+    NigeriaInfoURL.pause();
+    EagleURL.pause();
+    DreamURL.pause();
+    CrestURL.pause();
+    RootURL.pause();
+    FreshLagURL.pause();
+    LagoTalkURL.pause();
+   ArewaURL.pause();
+    GuaranteeURL.pause();
+    LibertyURL.pause();
+
+  }
+
+  //******************************* Jordan FM ***********************
+
+  var  JordanBtn    = document.querySelector(".jatto");
+  var  JordanURL = new Audio("https://stream-152.zeno.fm/gvyz1utf4uhvv?zs=EXmzv66SQ-24ZEyFh5Q8YA&aw_0_req_lsid=75f4898c82699cd1d3ad9b1733fe3b25&acu-uid=795281783502&an-uid=3532454489215125157&mm-uid=e8536437-7c6c-4c00-b1b9-ed2b7c87ccdf&dot-uid=0947240207763cef861a3cad&amb-uid=8771913727772736811&cto-uid=e3ba352b-7da6-4fda-bc62-53fa8a05eb0d-649de58d-5553&bsw-uid=daa8c31a-5535-4302-802c-016be705f17c&dyn-uid=45241777188514497&ttd-uid=7a480f5d-aecd-4b4f-a9fc-a529f6bce5cf&triton-uid=cookie%3A22d14922-b460-4f67-9890-3a6aaa26d0c3&adt-uid=cuid_90be48c0-1a66-11ee-9246-125335d52042");
+
+  function  JordanPlay(){
+    if(JordanURL.duration > 0)
+      {
+        JordanURL.load();
+        JordanURL.play()
+        Notice.innerHTML ="You're listening to AYEYARWADY FM "
+
+      }
+    else{
+        Notice.innerHTML ="Station is currently off line "
+    }
+
+  }
+
+  JordanBtn.onclick=()=>{
+
+    if(navigator.onLine)
+      {
+        LoadingIcon.style.display = "block";
+        JordanPlay();
+        ProgressBar();
+      }
+      else{
+        Notice.innerHTML ="Please check your internet ";
+    }
+    CityURL.pause();
+    FreshURL.pause();
+    MaxURL.pause();
+    ClassicURL.pause();
+    FaadURL.pause();
+    Thirty2URL.pause();
+    NigeriaInfoURL.pause();
+    EagleURL.pause();
+    DreamURL.pause();
+    CrestURL.pause();
+    RootURL.pause();
+    FreshLagURL.pause();
+    LagoTalkURL.pause();
+   ArewaURL.pause();
+    GuaranteeURL.pause();
+    LibertyURL.pause();
+
+  }
+
+  //******************************* FAD FM ***********************
+
+  var  FaadBtn    = document.querySelector(".grace");
+  var  FaadURL = new Audio("https://stream-150.zeno.fm/rtt1xsez338uv?zs=Qod2n06dT6-tfLTgto0MQQ&acu-uid=795281783502&an-uid=3532454489215125157&mm-uid=e8536437-7c6c-4c00-b1b9-ed2b7c87ccdf&dot-uid=0947240207763cef861a3cad&amb-uid=8771913727772736811&dbm-uid=CAESEFL2NO5uGDQh22jXjduHbv8&cto-uid=e3ba352b-7da6-4fda-bc62-53fa8a05eb0d-649de58d-5553&bsw-uid=daa8c31a-5535-4302-802c-016be705f17c&dyn-uid=45241777188514497&ttd-uid=7a480f5d-aecd-4b4f-a9fc-a529f6bce5cf&triton-uid=cookie%3A22d14922-b460-4f67-9890-3a6aaa26d0c3&adt-uid=cuid_90be48c0-1a66-11ee-9246-125335d52042");
+
+  function  FaadPlay(){
+    if(FaadURL.duration > 0)
+      {
+        FaadURL.load();
+        FaadURL.play()
+        Notice.innerHTML ="You're listening to FRIENDS FM "
+
+      }
+    else{
+        Notice.innerHTML ="Station is currently off line "
+    }
+
+  }
+
+  FaadBtn.onclick=()=>{
+
+    if(navigator.onLine)
+      {
+        LoadingIcon.style.display = "block";
+        FaadPlay();
+        ProgressBar();
+      }
+      else{
+        Notice.innerHTML ="Please check your internet ";
+    }
+    CityURL.pause();
+    FreshURL.pause();
+    MaxURL.pause();
+    ClassicURL.pause();
+    JordanURL.pause();
+    Thirty2URL.pause();
+    NigeriaInfoURL.pause();
+    EagleURL.pause();
+    DreamURL.pause();
+    CrestURL.pause();
+    RootURL.pause();
+    FreshLagURL.pause();
+    LagoTalkURL.pause();
+   ArewaURL.pause();
+    GuaranteeURL.pause();
+    LibertyURL.pause();
+
+  }
+
+  //******************************* 32 FM ***********************
+  var  Thirty2Btn    = document.querySelector(".thirty2");
+  var Thirty2URL = new Audio("https://stream-152.zeno.fm/90q46dcxvchvv?zs=RrqLbztfQpeZJvTkvYu0fA&acu-uid=795281783502&an-uid=3532454489215125157&mm-uid=e8536437-7c6c-4c00-b1b9-ed2b7c87ccdf&dot-uid=0947240207763cef861a3cad&amb-uid=8771913727772736811&dbm-uid=CAESEFL2NO5uGDQh22jXjduHbv8&cto-uid=e3ba352b-7da6-4fda-bc62-53fa8a05eb0d-649de58d-5553&bsw-uid=daa8c31a-5535-4302-802c-016be705f17c&dyn-uid=45241777188514497&ttd-uid=7a480f5d-aecd-4b4f-a9fc-a529f6bce5cf&triton-uid=cookie%3A22d14922-b460-4f67-9890-3a6aaa26d0c3&adt-uid=cuid_90be48c0-1a66-11ee-9246-125335d52042");
+
+  function  Thirty2Play(){
+    if(Thirty2URL.duration > 0)
+      {
+        Thirty2URL.load();
+        Thirty2URL.play()
+        Notice.innerHTML ="You're listening to ARKAR MYINT MO FM"
+
+      }
+    else{
+        Notice.innerHTML ="Station is currently off line "
+    }
+
+  }
+
+  Thirty2Btn.onclick=()=>{
+
+    if(navigator.onLine)
+      {
+        LoadingIcon.style.display = "block";
+        Thirty2Play();
+        ProgressBar();
+      }
+      else{
+        Notice.innerHTML ="Please check your internet ";
+    }
+    CityURL.pause();
+    FreshURL.pause();
+    MaxURL.pause();
+    ClassicURL.pause();
+    JordanURL.pause();
+    FaadURL.pause();
+   NigeriaInfoURL.pause();
+   EagleURL.pause();
+   DreamURL.pause();
+   CrestURL.pause();
+   RootURL.pause();
+   FreshLagURL.pause();
+    LagoTalkURL.pause();
+   ArewaURL.pause();
+   GuaranteeURL.pause();
+   LibertyURL.pause();
+
+
+  }
+
+
+  //*********************Nigeria Info FM ***********************
+
+  var  NigeriaInfoBtn    = document.querySelector(".Lagos");
+  var  NigeriaInfoURL = new Audio("https://stream-151.zeno.fm/p9k212xkp2zuv?zs=tLkQhQsNRlaLXjV8vNKvtw&aw_0_req_lsid=75f4898c82699cd1d3ad9b1733fe3b25&acu-uid=795281783502&an-uid=3532454489215125157&mm-uid=e8536437-7c6c-4c00-b1b9-ed2b7c87ccdf&dot-uid=0947240207763cef861a3cad&amb-uid=8771913727772736811&dbm-uid=CAESEFL2NO5uGDQh22jXjduHbv8&cto-uid=e3ba352b-7da6-4fda-bc62-53fa8a05eb0d-649de58d-5553&bsw-uid=daa8c31a-5535-4302-802c-016be705f17c&dyn-uid=45241777188514497&ttd-uid=7a480f5d-aecd-4b4f-a9fc-a529f6bce5cf&triton-uid=cookie%3A22d14922-b460-4f67-9890-3a6aaa26d0c3&adt-uid=cuid_90be48c0-1a66-11ee-9246-125335d52042");
+
+  function NigeriaInfoPlay(){
+    if( NigeriaInfoURL.duration > 0)
+      {
+         NigeriaInfoURL.load();
+         NigeriaInfoURL.play()
+        Notice.innerHTML ="You're listening to ARAKAN FM "
+
+      }
+    else{
+        Notice.innerHTML ="Station is currently off line "
+    }
+
+  }
+
+  NigeriaInfoBtn .onclick=()=>{
+
+    if(navigator.onLine)
+      {
+        LoadingIcon.style.display = "block";
+        NigeriaInfoPlay();
+        ProgressBar();
+      }
+      else{
+        Notice.innerHTML ="Please check your internet ";
+    }
+    CityURL.pause();
+    FreshURL.pause();
+    MaxURL.pause();
+    ClassicURL.pause();
+    JordanURL.pause();
+    FaadURL.pause();
+    Thirty2URL.pause();
+    EagleURL.pause();
+    DreamURL.pause();
+    CrestURL.pause();
+    RootURL.pause();
+    FreshLagURL.pause();
+    LagoTalkURL.pause();
+    ArewaURL.pause();
+    GuaranteeURL.pause();
+    LibertyURL.pause();
+
+
+  }
+  //*********************Eagle FM ***********************
+  var  EagleBtn    = document.querySelector(".smash");
+  var  EagleURL    = new Audio("https://stream-149.zeno.fm/pxn7p5cbm48uv?zs=zybkp5owQlWlG5KFOgsPYw&acu-uid=795281783502&an-uid=3532454489215125157&mm-uid=e8536437-7c6c-4c00-b1b9-ed2b7c87ccdf&dot-uid=0947240207763cef861a3cad&amb-uid=8771913727772736811&dbm-uid=CAESEFL2NO5uGDQh22jXjduHbv8&cto-uid=e3ba352b-7da6-4fda-bc62-53fa8a05eb0d-649de58d-5553&bsw-uid=daa8c31a-5535-4302-802c-016be705f17c&dyn-uid=45241777188514497&ttd-uid=7a480f5d-aecd-4b4f-a9fc-a529f6bce5cf&triton-uid=cookie%3A22d14922-b460-4f67-9890-3a6aaa26d0c3&adt-uid=cuid_90be48c0-1a66-11ee-9246-125335d52042");
+
+  function EaglePlay(){
+    if( EagleURL.duration > 0)
+      {
+         EagleURL.load();
+         EagleURL.play()
+        Notice.innerHTML ="You're listening to SHWEHINTHAR FM"
+
+      }
+    else{
+        Notice.innerHTML ="Station is currently off line "
+    }
+
+  }
+
+  EagleBtn .onclick=()=>{
+
+    if(navigator.onLine)
+      {
+        LoadingIcon.style.display = "block";
+        EaglePlay();
+        ProgressBar();
+      }
+      else{
+        Notice.innerHTML ="Please check your internet ";
+    }
+    CityURL.pause();
+    FreshURL.pause();
+    MaxURL.pause();
+    ClassicURL.pause();
+    JordanURL.pause();
+    FaadURL.pause();
+    Thirty2URL.pause();
+    NigeriaInfoURL.pause();
+    DreamURL.pause();
+    CrestURL.pause();
+    RootURL.pause();
+    FreshLagURL.pause();
+    LagoTalkURL.pause();
+   ArewaURL.pause();
+    GuaranteeURL.pause();
+    LibertyURL.pause();
+
+  }
+  //*********************Dream FM ***********************
+  var  DreamBtn    = document.querySelector(".dream");
+  var  DreamURL    = new Audio("https://stream-149.zeno.fm/pxn7p5cbm48uv?zs=zybkp5owQlWlG5KFOgsPYw&acu-uid=795281783502&an-uid=3532454489215125157&mm-uid=e8536437-7c6c-4c00-b1b9-ed2b7c87ccdf&dot-uid=0947240207763cef861a3cad&amb-uid=8771913727772736811&dbm-uid=CAESEFL2NO5uGDQh22jXjduHbv8&cto-uid=e3ba352b-7da6-4fda-bc62-53fa8a05eb0d-649de58d-5553&bsw-uid=daa8c31a-5535-4302-802c-016be705f17c&dyn-uid=45241777188514497&ttd-uid=7a480f5d-aecd-4b4f-a9fc-a529f6bce5cf&triton-uid=cookie%3A22d14922-b460-4f67-9890-3a6aaa26d0c3&adt-uid=cuid_90be48c0-1a66-11ee-9246-125335d52042");
+
+  function DreamPlay(){
+    if( DreamURL.duration > 0)
+      {
+         DreamURL.load();
+         DreamURL.play()
+        Notice.innerHTML ="You're listening to NEVERMIRE FM "
+
+      }
+    else{
+        Notice.innerHTML ="Station is currently off line "
+    }
+
+  }
+
+  DreamBtn .onclick=()=>{
+
+    if(navigator.onLine)
+      {
+        LoadingIcon.style.display = "block";
+        DreamPlay();
+        ProgressBar();
+      }
+      else{
+        Notice.innerHTML ="Please check your internet ";
+    }
+    CityURL.pause();
+    FreshURL.pause();
+    MaxURL.pause();
+    ClassicURL.pause();
+    JordanURL.pause();
+    FaadURL.pause();
+    Thirty2URL.pause();
+    NigeriaInfoURL.pause();
+    EagleURL.pause();
+    CrestURL.pause();
+    RootURL.pause();
+    FreshLagURL.pause();
+    LagoTalkURL.pause();
+    ArewaURL.pause();
+    GuaranteeURL.pause();
+    LibertyURL.pause();
+
+
+  }
+  //*********************Crest FM ***********************
+  var  CrestBtn    = document.querySelector(".crest");
+  var  CrestURL    = new Audio("https://stream-151.zeno.fm/hnsabdeu7k0uv?zs=kwA0WWeYRwKiOfGCkPJU7w&aw_0_req_lsid=75f4898c82699cd1d3ad9b1733fe3b25&acu-uid=795281783502&an-uid=3532454489215125157&mm-uid=e8536437-7c6c-4c00-b1b9-ed2b7c87ccdf&dot-uid=0947240207763cef861a3cad&amb-uid=8771913727772736811&dbm-uid=CAESEFL2NO5uGDQh22jXjduHbv8&cto-uid=e3ba352b-7da6-4fda-bc62-53fa8a05eb0d-649de58d-5553&bsw-uid=daa8c31a-5535-4302-802c-016be705f17c&dyn-uid=45241777188514497&ttd-uid=7a480f5d-aecd-4b4f-a9fc-a529f6bce5cf&triton-uid=cookie%3A22d14922-b460-4f67-9890-3a6aaa26d0c3&adt-uid=cuid_90be48c0-1a66-11ee-9246-125335d52042");
+
+  function CrestPlay(){
+    if( DreamURL.duration > 0)
+      {
+         CrestURL.load();
+         CrestURL.play()
+        Notice.innerHTML ="You're listening to MINGALARPAR FM "
+
+      }
+    else{
+        Notice.innerHTML ="Station is currently off line "
+    }
+
+  }
+
+  CrestBtn .onclick=()=>{
+
+    if(navigator.onLine)
+      {
+        LoadingIcon.style.display = "block";
+        CrestPlay();
+        ProgressBar();
+      }
+      else{
+        Notice.innerHTML ="Please check your internet ";
+    }
+    CityURL.pause();
+    FreshURL.pause();
+    MaxURL.pause();
+    ClassicURL.pause();
+    JordanURL.pause();
+    FaadURL.pause();
+    Thirty2URL.pause();
+    NigeriaInfoURL.pause();
+    EagleURL.pause();
+    DreamURL.pause();
+    RootURL.pause();
+    FreshLagURL.pause();
+     LagoTalkURL.pause();
+    ArewaURL.pause();
+    GuaranteeURL.pause();
+    LibertyURL.pause();
+
+
+  }
+
+  //*********************Root FM ***********************
+  var  RootBtn    = document.querySelector(".root");
+  var  RootURL    = new Audio("https://stream-151.zeno.fm/hnsabdeu7k0uv?zs=kwA0WWeYRwKiOfGCkPJU7w&aw_0_req_lsid=75f4898c82699cd1d3ad9b1733fe3b25&acu-uid=795281783502&an-uid=3532454489215125157&mm-uid=e8536437-7c6c-4c00-b1b9-ed2b7c87ccdf&dot-uid=0947240207763cef861a3cad&amb-uid=8771913727772736811&dbm-uid=CAESEFL2NO5uGDQh22jXjduHbv8&cto-uid=e3ba352b-7da6-4fda-bc62-53fa8a05eb0d-649de58d-5553&bsw-uid=daa8c31a-5535-4302-802c-016be705f17c&dyn-uid=45241777188514497&ttd-uid=7a480f5d-aecd-4b4f-a9fc-a529f6bce5cf&triton-uid=cookie%3A22d14922-b460-4f67-9890-3a6aaa26d0c3&adt-uid=cuid_90be48c0-1a66-11ee-9246-125335d52042");
+
+  function RootPlay(){
+    if( RootURL.duration > 0)
+      {
+         RootURL.load();
+         RootURL.play()
+        Notice.innerHTML ="You're listening to Epoch 153 FM "
+
+      }
+    else{
+        Notice.innerHTML ="Station is currently off line "
+    }
+
+  }
+
+  RootBtn.onclick=()=>{
+
+    if(navigator.onLine)
+      {
+        LoadingIcon.style.display = "block";
+        RootPlay();
+        ProgressBar();
+      }
+      else{
+        Notice.innerHTML ="Please check your internet ";
+    }
+    CityURL.pause();
+    FreshURL.pause();
+    MaxURL.pause();
+    ClassicURL.pause();
+    JordanURL.pause();
+    FaadURL.pause();
+    Thirty2URL.pause();
+    NigeriaInfoURL.pause();
+    EagleURL.pause();
+    DreamURL.pause();
+    CrestURL.pause();
+    FreshLagURL.pause();
+    FreshLagURL.pause();
+     LagoTalkURL.pause();
+    ArewaURL.pause();
+    GuaranteeURL.pause();
+    LibertyURL.pause();
+
+
+  }
+
+  //*****************Fresh FM, Lagos*****************
+  var  FreshLagBtn = document.querySelector(".freshLagos");
+  var  FreshLagURL = new Audio("http://streaming.radionomy.com/JamendoLounge");
+
+  function FreshLagosPlay(){
+    if( FreshLagURL.duration > 0)
+      {
+         FreshLagURL.load();
+         FreshLagURL.play()
+        Notice.innerHTML ="You're listening to Bagan FM, "
+
+      }
+    else{
+        Notice.innerHTML ="Station is currently off line "
+    }
+
+  }
+
+  FreshLagBtn.onclick=()=>{
+
+    if(navigator.onLine)
+      {
+        LoadingIcon.style.display = "block";
+        FreshLagosPlay();
+        ProgressBar();
+      }
+      else{
+        Notice.innerHTML ="Please check your internet ";
+    }
+    CityURL.pause();
+    FreshURL.pause();
+    MaxURL.pause();
+    ClassicURL.pause();
+    JordanURL.pause();
+    FaadURL.pause();
+    Thirty2URL.pause();
+    NigeriaInfoURL.pause();
+    EagleURL.pause();
+    DreamURL.pause();
+    CrestURL.pause();
+    RootURL.pause();
+    LagoTalkURL.pause();
+    ArewaURL.pause();
+    GuaranteeURL.pause();
+     LibertyURL.pause();
+
+
+  }
+
+
+
+  //****************** Arewa Radio *******************
+
+
+  var  ArewaBtn = document.querySelector(".arewa");
+  var  ArewaURL = new Audio("https://hls.rastream.com/monnect-mir.web.hls/playlist.m3u8?listeningSessionID=64663cff008c63c8_5195797_S6FU67Kb_MTAzLjIxLjgxLjk6ODA!_0000007ei5H&downloadSessionID=0&awparams=companionads%3Atrue%3Btags%3Aradioactive%3Bstationid%3Amonnect-mir&playerid=MI%20Radio_web&authtoken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvaWQiOiJsYXlsaW8iLCJpYXQiOjE2ODk2MTc1ODgsImV4cCI6MTY4OTcwMzk4OH0.Q-_pzCYHtnZHA5SORpJQ1MEflHv7RDXA_DF3_Qfu0VM&lan=%5B%22en%22%5D&setLanguage=true&listenerid=bde4c135c824bf98a89cb6f49636ebfb");
+
+  function ArewaPlay(){
+    if( ArewaURL.duration > 0)
+      {
+         ArewaURL.load();
+         ArewaURL.play()
+        Notice.innerHTML ="You're listening to  Myanmar International Radio ";
+      }
+    else{
+        Notice.innerHTML ="Station is currently off line "
+    }
+
+  }
+
+  ArewaBtn.onclick=()=>{
+
+    if(navigator.onLine)
+      {
+        LoadingIcon.style.display = "block";
+        ArewaPlay();
+        ProgressBar();
+      }
+      else{
+        Notice.innerHTML ="Please check your internet ";
+    }
+    CityURL.pause();
+    FreshURL.pause();
+    MaxURL.pause();
+    ClassicURL.pause();
+    JordanURL.pause();
+    FaadURL.pause();
+    Thirty2URL.pause();
+    NigeriaInfoURL.pause();
+    EagleURL.pause();
+    DreamURL.pause();
+    CrestURL.pause();
+    RootURL.pause();
+    FreshLagURL.pause();
+    LagoTalkURL.pause();
+    GuaranteeURL.pause();
+    LibertyURL.pause();
+  }
+
+  //*******************Guarantee Radio ******************
+
+  var  GuaranteeBtn = document.querySelector(".Guarantee");
+  var  GuaranteeURL = new Audio("https://listen4.myradio24.com/39982");
+
+  function GuaranteePlay(){
+    if( GuaranteeURL.duration > 0)
+      {
+         GuaranteeURL.load();
+         GuaranteeURL.play()
+        Notice.innerHTML ="You're listening to Radio Voice of Burma";
+      }
+    else{
+        Notice.innerHTML ="Station is currently off line "
+    }
+
+  }
+
+  GuaranteeBtn.onclick=()=>{
+
+    if(navigator.onLine)
+      {
+        LoadingIcon.style.display = "block";
+        GuaranteePlay();
+        ProgressBar();
+      }
+      else{
+        Notice.innerHTML ="Please check your internet ";
+    }
+    CityURL.pause();
+    FreshURL.pause();
+    MaxURL.pause();
+    ClassicURL.pause();
+    JordanURL.pause();
+    FaadURL.pause();
+    Thirty2URL.pause();
+    NigeriaInfoURL.pause();
+    EagleURL.pause();
+    DreamURL.pause();
+    CrestURL.pause();
+    RootURL.pause();
+    FreshLagURL.pause();
+    LagoTalkURL.pause();
+    ArewaURL.pause();
+    LibertyURL.pause();
+  }
+
+  //******************* Liberty FM kano ******************
+  var  LibertyBtn = document.querySelector(".Liberty");
+  var  LibertyURL = new Audio("https://cast3.my-control-panel.com/proxy/starfmky/stream");
+
+  function LibertyPlay(){
+    if( GuaranteeURL.duration > 0)
+      {
+         LibertyURL.load();
+         LibertyURL.play()
+        Notice.innerHTML ="You're listening to  Star FM";
+      }
+    else{
+        Notice.innerHTML ="Station is currently off line "
+    }
+
+  }
+
+  LibertyBtn.onclick=()=>{
+
+    if(navigator.onLine)
+      {
+        LoadingIcon.style.display = "block";
+        LibertyPlay();
+        ProgressBar();
+      }
+      else{
+        Notice.innerHTML ="Please check your internet ";
+    }
+    CityURL.pause();
+    FreshURL.pause();
+    MaxURL.pause();
+    ClassicURL.pause();
+    JordanURL.pause();
+    FaadURL.pause();
+    Thirty2URL.pause();
+    NigeriaInfoURL.pause();
+    EagleURL.pause();
+    DreamURL.pause();
+    CrestURL.pause();
+    RootURL.pause();
+    FreshLagURL.pause();
+    LagoTalkURL.pause();
+    ArewaURL.pause();
+    GuaranteeURL.pause();
+  }
+
+  //******************* STOP BUTTON ******************
+  StopBtn.onclick=()=>{
+    CityURL.pause();
+    FreshURL.pause();
+    MaxURL.pause();
+    ClassicURL.pause();
+    JordanURL.pause();
+    FaadURL.pause();
+    Thirty2URL.pause();
+    NigeriaInfoURL.pause();
+    EagleURL.pause();
+    DreamURL.pause();
+    CrestURL.pause();
+    RootURL.pause();
+    FreshLagURL.pause();
+    LagoTalkURL.pause();
+    ArewaURL.pause();
+    GuaranteeURL.pause();
+    LibertyURL.pause();
+    LoadingIcon.style.display = "none"; 
+
+    Notice.innerHTML =" ";
+  }
+
+
+    </script>
+
+
+</html>
