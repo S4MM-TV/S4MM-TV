@@ -167,90 +167,90 @@ button.addEventListener("click", () => {
    } else if (button.classList.contains("match59")) {
     videoFun1(productData1[11].url4);
    } else if (button.classList.contains("match60")) {
-    videoFun1(productData1[11].url5);
+    videoFun2(productData1[11].url5);
 
   } else if (button.classList.contains("match61")) {
-    videoFun1(productData1[12].url1);
+    videoFun2(productData1[12].url1);
    } else if (button.classList.contains("match62")) {
-    videoFun1(productData1[12].url2);
+    videoFun2(productData1[12].url2);
    } else if (button.classList.contains("match63")) {
-    videoFun1(productData1[12].url3);
+    videoFun2(productData1[12].url3);
    } else if (button.classList.contains("match64")) {
-    videoFun1(productData1[12].url4);
+    videoFun2(productData1[12].url4);
    } else if (button.classList.contains("match65")) {
-    videoFun1(productData1[12].url5);
+    videoFun2(productData1[12].url5);
 
    } else if (button.classList.contains("match66")) {
-    videoFun1(productData1[13].url1);
+    videoFun2(productData1[13].url1);
    } else if (button.classList.contains("match67")) {
-    videoFun1(productData1[13].url2);
+    videoFun2(productData1[13].url2);
     } else if (button.classList.contains("match68")) {
-      videoFun1(productData1[13].url3);
+      videoFun2(productData1[13].url3);
     } else if (button.classList.contains("match69")) {
-      videoFun1(productData1[13].url4);
+      videoFun2(productData1[13].url4);
     } else if (button.classList.contains("match70")) {
-      videoFun1(productData1[13].url5);
+      videoFun2(productData1[13].url5);
 
    } else if (button.classList.contains("match71")) {
-    videoFun1(productData1[14].url1);
+    videoFun2(productData1[14].url1);
    } else if (button.classList.contains("match72")) {
-    videoFun1(productData1[14].url2);
+    videoFun2(productData1[14].url2);
    }else if (button.classList.contains("match73")) {
     videoFun2(productData1[14].url3);
    }else if (button.classList.contains("match74")) {
-    videoFun1(productData1[14].url4);
+    videoFun2(productData1[14].url4);
    }else if (button.classList.contains("match75")) {
-    videoFun1(productData1[14].url5);
+    videoFun2(productData1[14].url5);
 
 } else if (button.classList.contains("match76")) {
-    videoFun1(productData1[15].url1);
+    videoFun2(productData1[15].url1);
    } else if (button.classList.contains("match77")) {
     videoFun2(productData1[15].url2);
    }else if (button.classList.contains("match78")) {
-    videoFun1(productData1[15].url3);
+    videoFun2(productData1[15].url3);
    }else if (button.classList.contains("match79")) {
-    videoFun1(productData1[15].url4);
+    videoFun2(productData1[15].url4);
    }else if (button.classList.contains("match80")) {
-    videoFun1(productData1[15].url5);
+    videoFun2(productData1[15].url5);
 
 
    }else if (button.classList.contains("match81")) {
     videoFun1(productData1[16].url1);
    } else if (button.classList.contains("match82")) {
-    videoFun1(productData1[16].url2);
+    videoFun2(productData1[16].url2);
    }else if (button.classList.contains("match83")) {
-    videoFun1(productData1[16].url3);
+    videoFun2(productData1[16].url3);
    }else if (button.classList.contains("match84")) {
-    videoFun1(productData1[16].url4);
+    videoFun2(productData1[16].url4);
    }else if (button.classList.contains("match85")) {
-    videoFun1(productData1[16].url5);
+    videoFun2(productData1[16].url5);
 
      }else if (button.classList.contains("match86")) {
-    videoFun1(productData1[17].url1);
+    videoFun2(productData1[17].url1);
    } else if (button.classList.contains("match87")) {
-    videoFun1(productData1[17].url2);
+    videoFun2(productData1[17].url2);
    }else if (button.classList.contains("match88")) {
-    videoFun1(productData1[17].url3);
+    videoFun2(productData1[17].url3);
    }else if (button.classList.contains("match89")) {
-    videoFun1(productData1[17].url4);
+    videoFun2(productData1[17].url4);
    }else if (button.classList.contains("match90")) {
-    videoFun1(productData1[17].url5);
+    videoFun2(productData1[17].url5);
 
      }else if (button.classList.contains("match91")) {
-    videoFun1(productData1[18].url1);
+    videoFun2(productData1[18].url1);
    } else if (button.classList.contains("match92")) {
-    videoFun1(productData1[18].url2);
+    videoFun2(productData1[18].url2);
    }else if (button.classList.contains("match93")) {
-    videoFun1(productData1[18].url3);
+    videoFun2(productData1[18].url3);
    }else if (button.classList.contains("match94")) {
     videoFun2(productData1[18].url4);
    }else if (button.classList.contains("match95")) {
-    videoFun1(productData1[18].url5);
+    videoFun2(productData1[18].url5);
 
      }else if (button.classList.contains("match96")) {
     videoFun2(productData1[19].url1);
    } else if (button.classList.contains("match97")) {
-    videoFun1(productData1[19].url2);
+    videoFun2(productData1[19].url2);
    }else if (button.classList.contains("match98")) {
     videoFun2(productData1[19].url3);
    }else if (button.classList.contains("match99")) {
@@ -275,7 +275,6 @@ console.log("try catch error")
 })
 
 const allButtons = document.querySelectorAll(`.match1,.match2,.match3,.match4,.match5,.match6,.match7,.match8,.match9,.match10,.match11,.match12,.match13,.match14,.match15,
-
 .match16,.match17,.match18,.match19,.match20,.match21,.match22,.match23,.match24,.match25,.match26,.match27,.match28,.match29,.match30,.match31,.match32,.match33,.match34,.match35,
 .match36,.match37,.match38,.match39,.match40,.match41,.match42,.match43,.match44,.match45,.match46,.match47,.match48,.match49,.match50,.match51,.match52,.match53,.match54,.match55,.match56,.match57,
 .match58,.match59,.match60,.match61,.match62,.match63,.match64,.match65,.match66,.match67,.match68,.match69,.match70,.match71,.match72,.match73
@@ -327,7 +326,6 @@ window.location.href = networkStreamPlayerURL;
 alert("This feature is only available on Android devices.");
 }
 };
-
 const videoFun1 = (m3u8URL) => {
 console.log("helloWorld");
 const isAndroid = /Android/i.test(navigator.userAgent);
