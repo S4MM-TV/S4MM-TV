@@ -1,5 +1,5 @@
 
-const url = "http://s4mm-tv.github.io/thai/thm3u.html"
+const url = "https://s4mm-tv.github.io/thai/thm3u.html"
 fetch(url)
   .then((response) => {
     const urlData = response.json();
