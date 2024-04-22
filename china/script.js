@@ -1,5 +1,5 @@
 
-const url = "https://s4mm-tv.github.io/china/chinam3.html"
+const url = "https://livesportmm-s4mm.static.hf.space/china/chinam3.js"
 fetch(url)
   .then((response) => {
     const urlData = response.json();
@@ -75,52 +75,52 @@ fetch(url)
           videoFun1(threeUrl1);
         } else if (button.classList.contains("match17")) {
           const threeUrl2 = productData1[3].url2.replace("https://", "");
-          videoFun2(threeUrl2);
+          videoFun1(threeUrl2);
         } else if (button.classList.contains("match18")) {
           const threeUrl3 = productData1[3].url3.replace("https://", "");
-          videoFun2(threeUrl3);
+          videoFun1(threeUrl3);
         } else if (button.classList.contains("match19")) {
-          const threeUrl4 = productData1[3].url4.replace("http://", "");
+          const threeUrl4 = productData1[3].url4.replace("https://", "");
           videoFun1(threeUrl4);
         } else if (button.classList.contains("match20")) {
-          const threeUrl5 = productData1[3].url5.replace("http://", "");
-          videoFun2(threeUrl5);
+          const threeUrl5 = productData1[3].url5.replace("https://", "");
+          videoFun1(threeUrl5);
 
         } else if (button.classList.contains("match21")) {
-          const fourUrl1 = productData1[4].url1.replace("http://", "");
-          videoFun2(fourUrl1);
+          const fourUrl1 = productData1[4].url1.replace("https://", "");
+          videoFun1(fourUrl1);
         } else if (button.classList.contains("match22")) {
-          const fourUrl2 = productData1[4].url2.replace("http://", "");
-          videoFun2(fourUrl2);
+          const fourUrl2 = productData1[4].url2.replace("https://", "");
+          videoFun1(fourUrl2);
         } else if (button.classList.contains("match23")) {
-          const fourUrl3 = productData1[4].url3.replace("http://", "");
-          videoFun2(fourUrl3);
+          const fourUrl3 = productData1[4].url3.replace("https://", "");
+          videoFun1(fourUrl3);
         } else if (button.classList.contains("match24")) {
-          const fourUrl4 = productData1[4].url4.replace("http://", "");
-          videoFun2(fourUrl4);
+          const fourUrl4 = productData1[4].url4.replace("https://", "");
+          videoFun1(fourUrl4);
         } else if (button.classList.contains("match25")) {
-          const fourUrl5 = productData1[4].url5.replace("http://", "");
+          const fourUrl5 = productData1[4].url5.replace("https://", "");
           videoFun1(fourUrl5);
 
         } else if (button.classList.contains("match26")) {
-          const fiveUrl1 = productData1[5].url1.replace("http://", "");
-          videoFun2(fiveUrl1);
+          const fiveUrl1 = productData1[5].url1.replace("https://", "");
+          videoFun1(fiveUrl1);
         } else if (button.classList.contains("match27")) {
-          const fiveUrl2 = productData1[5].url2.replace("http://", "");
-          videoFun2(fiveUrl2);
+          const fiveUrl2 = productData1[5].url2.replace("https://", "");
+          videoFun1(fiveUrl2);
         } else if (button.classList.contains("match28")) {
-          const fiveUrl3 = productData1[5].url3.replace("http://", "");
-          videoFun2(fiveUrl3);
+          const fiveUrl3 = productData1[5].url3.replace("https://", "");
+          videoFun1(fiveUrl3);
         } else if (button.classList.contains("match29")) {
-          const fiveUrl4 = productData1[5].url4.replace("http://", "");
-          videoFun2(fiveUrl4);
+          const fiveUrl4 = productData1[5].url4.replace("https://", "");
+          videoFun1(fiveUrl4);
         } else if (button.classList.contains("match30")) {
-          const fiveUrl5 = productData1[5].url5.replace("http://", "");
-          videoFun2(fiveUrl5);
+          const fiveUrl5 = productData1[5].url5.replace("https://", "");
+          videoFun1(fiveUrl5);
 
         } else if (button.classList.contains("match31")) {
-          const sixUrl1 = productData1[6].url1.replace("http://", "");
-          videoFun2(sixUrl1);
+          const sixUrl1 = productData1[6].url1.replace("https://", "");
+          videoFun1(sixUrl1);
         } else if (button.classList.contains("match32")) {
           const sixUrl2 = productData1[6].url2.replace("http://", "");
           videoFun2(sixUrl2);
