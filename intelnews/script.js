@@ -1,4 +1,4 @@
-const url = "https://s4mm-tv.github.io/intelnews/newssm3.html"
+const url = "https://livesportmm-s4mm.static.hf.space/intlnews/newssm3.js"
 fetch(url)
   .then((response) => {
   const urlData = response.json();
@@ -13,7 +13,7 @@ button.addEventListener("click", () => {
 
   if (button.classList.contains("match1")) {
     const currentplayingIndex = 0;
-     videoFun1(productData1[0].url1);
+     videoFun2(productData1[0].url1);
      console.log(productData1[0].url1)
     } else if (button.classList.contains("match2")) {
      console.log("world");
@@ -42,15 +42,15 @@ button.addEventListener("click", () => {
   videoFun1(productData1[1].url3);
 } else if (button.classList.contains("match9")) {
     console.log("world");
-    videoFun1(productData1[1].url4);
+    videoFun2(productData1[1].url4);
     console.log(productData1[1].url4)
   } else if (button.classList.contains("match10")) {
     console.log("world");
-    videoFun1(productData1[1].url5);
+    videoFun2(productData1[1].url5);
 
   } else if (button.classList.contains("match11")) {
     console.log("world");
-    videoFun1(productData1[2].url1);
+    videoFun2(productData1[2].url1);
    } else if (button.classList.contains("match12")) {
      console.log("world");
      const currentplayingIndex = 3;
@@ -61,7 +61,7 @@ button.addEventListener("click", () => {
     videoFun1(productData1[2].url3);
    } else if (button.classList.contains("match14")) {
      console.log("world");
-     videoFun1(productData1[2].url4);
+     videoFun2(productData1[2].url4);
    } else if (button.classList.contains("match15")) {
     console.log("world");
     videoFun1(productData1[2].url5);
