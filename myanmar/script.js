@@ -1,4 +1,4 @@
-const url = "https://s4mm-tv.github.io//Myanmar/myanmarm3.html"
+const url = "https://s4mm-tv.github.io/myanmarm3.html"
 fetch(url)
   .then((response) => {
   const urlData = response.json();
